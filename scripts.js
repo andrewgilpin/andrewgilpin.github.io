@@ -1,11 +1,18 @@
-
+/* ================================= 
+  On Click Goodies
+==================================== */
             document.getElementById('formSubmit').onclick = result;
             document.getElementById('submitReverse').onclick = reverse;
             document.getElementById('submitTrace').onclick = trace;
   			document.getElementById('submitForwarding').onclick = forwarding;
    			document.getElementById('submitAlcatel').onclick = alcatel;
 			document.getElementById('formClear').onclick = clear;
-                function result(event) {
+               
+/* ================================= 
+  Functions
+==================================== */
+
+		function result(event) {
                 event.preventDefault();
                 var aside = document.getElementById( 'aside').value;
                 var zside = document.getElementById( 'zside').value;
