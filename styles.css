@@ -17,11 +17,14 @@ img {
     height: auto; 
 }
 input, textarea {
-  background-color : black;
+  background: black;
   color: white;
-  border: white;
+  border-style: solid;
+  border-color: #bfbfbf;
 }
-
+legend {
+	color: #bfbfbf;
+}
 /* ================================= 
   Classes
 ==================================== */
@@ -39,7 +42,6 @@ input, textarea {
 
 .coolbutton 
     {
-        background: black;
 	    background-image: -webkit-linear-gradient(top, grey, black); 
 	    background-image: -moz-linear-gradient(top, grey, black); 
 	    background-image: -ms-linear-gradient(top, grey, black); 
@@ -54,7 +56,7 @@ input, textarea {
 	    padding: 10px 20px 10px 20px; 
 	    text-decoration: none; 
 	    margin-top:5px; 
-	    height:20px; 
+	    height:auto; 
 	    width:200px;
     }
 .formthings 
@@ -63,11 +65,7 @@ input, textarea {
     }
 .uniformity 
     {
-        width: 100px; display: inline-block;
-    }
-.headers
-    {
-        color="blue";
+        width: 80px; display: inline-block;
     }
 .name {
 	margin: 0;
