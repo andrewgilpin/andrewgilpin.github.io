@@ -3,12 +3,18 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" href="normalize.css">
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>MPLS Tools</title>
+	<header class="main-header">
+			<div class="container">
+				<h1 class="name">MPLS Troubleshooting Tools and Command Generator</h1>	
+		</div>
+	</header>
+<title>MPLS Tools</title>
 </head>
 <body>
-    <h1 class="headers">MPLS Tools</h1>
+<div class="container">
         <p>To get the information needed to fill out this template, you will need to first find the xconnect information. This can be done by showing all xconnects and locating your customer's vlan/subinterface, searching by subinterface, or pseudowire ID.</p>
             <h2 class="headers">Commands to locate the xconnect information:</h2>
                 <p>show l2vpn xconnect --This will list all of the xconnects on the current device.</p>
@@ -54,7 +60,7 @@
                         <output name="clear"></output><br>
                      </form>
       
-
+</div>
     </body>
 
     <footer>
