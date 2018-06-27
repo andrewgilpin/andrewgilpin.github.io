@@ -12,7 +12,6 @@
                 var pseudowire = document.getElementById('pseudowire').value;
                 console.log(aside, zside, pseudowire);
                 document.querySelector('output').innerHTML = 'ping mpls pseudowire ' + zside + ' ' + pseudowire + ' source ' + aside + ' size 1500 repeat 100 interval 10';
-                make_copy_button();
                 }
                 function reverse(event) {
                 event.preventDefault();
