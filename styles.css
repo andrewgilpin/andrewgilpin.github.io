@@ -1,0 +1,16 @@
+.coolbutton 
+    {
+        background: #ff0000; background-image: -webkit-linear-gradient(top, #ff0000, #a60303); background-image: -moz-linear-gradient(top, #ff0000, #a60303); background-image: -ms-linear-gradient(top, #ff0000, #a60303); background-image: -o-linear-gradient(top, #ff0000, #a60303); background-image: linear-gradient(to bottom, #ff0000, #a60303); -webkit-border-radius: 25; -moz-border-radius: 25; border-radius: 25px; text-shadow: 1px 1px 3px 66666; color: #ffffff; font-size: 20px; padding: 10px 20px 10px 20px; text-decoration: none; margin-top:5px; height:40px; width:250px;
+    }
+.formthings 
+    {
+        width: 150px;
+    }
+.uniformity 
+    {
+        width: 50px; display: inline-block;
+    }
+.headers
+    {
+        color="blue";
+    }

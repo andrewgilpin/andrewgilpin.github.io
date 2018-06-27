@@ -1,0 +1,72 @@
+ 
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MPLS Tools</title>
+</head>
+<body>
+    <h1 class="headers">MPLS Tools</h1>
+        <p>To get the information needed to fill out this template, you will need to first find the xconnect information. This can be done by showing all xconnects and locating your customer's vlan/subinterface, searching by subinterface, or pseudowire ID.</p>
+            <h2 class="headers">Commands to locate the xconnect information:</h2>
+                <p>show l2vpn xconnect --This will list all of the xconnects on the current device.</p>
+                <p>show l2vpn xconnect | include 3004 --This will list the xconnects on the current device that are associated with the customer's vlan id if you're not sure of their subinterface.</p>
+                <p>show l2vpn xconnect interface Gi0/1/1/6.3004  --This will display the xconnect on a specific customer's subinterface.</p>
+                <p>show l2vpn xconnect pw-id 100227708  --This will display the xconnect by pseudowire.</p>
+                <p>With this output, we can see that the Z side of the circuit is at 96.34.238.66 and the pseudowire ID is 100227708. Now we need the loopback 14 address of our A side device.</p>
+                    <img src="https://i.imgur.com/gKbtZaW.png" title="show l2vpn xconnect interface Gi0/1/1/6.3004" />
+<br />
+<br />
+                <p>show running-config interface Loopback 14</p>
+                    <img src="https://i.imgur.com/BmUZKEl.png" title="show running-config interface Loopback 14" />
+                <p>After running this command, we now have the A side ip as 96.34.236.150 and have the information we need to be able to use the command generator!</p>
+<br />
+                    <form action="index.html" method="post">
+                    <h1 class="headers">MPLS Command Generator</h1>
+                        <fieldset>
+                            <legend>Path information</legend>
+                            <label class="uniformity" for="aside">A side:</label>
+                            <input class="formthings" type="text" id="aside" name="aside">
+                            <br />
+                            <label class="uniformity" for="zside">Z side:</label>
+                            <input class="formthings" type="text" id="zside" name="zside">
+                            <br />
+                            <label class="uniformity" for="pseudowire">PW ID:</label>
+                            <input class="formthings" type="text" id="pseudowire" name="pseudowire">
+                            <br />
+                        </fieldset> 
+                                <button class="coolbutton" id="formSubmit" type="submit">Ping command A to Z</button><span> ---Ping across the path  (Note: If your Z side device is a 7600, you will not be able to ping to it, but you can ping from it to a 9K)</span> <br>
+                                <button class="coolbutton" id="submitReverse" type="submit">Ping command Z to A</button><span> ---Ping across the reverse path</span><br>
+                                <button class="coolbutton" id="submitAlcatel" type="submit">Alcatel Z to Cisco A</button><span> ---Use this if your Z side device is an Alcatel (Note: This is not always accurate as the pings may deviate from the MPLS path.)</span> <br>
+                                <button class="coolbutton" id="submitTrace" type="submit">MPLS Trace</button><span> ---Automatically trace from the A side to the Z side<span> <br>
+                                <button class="coolbutton" id="submitForwarding" type="submit">MPLS Forwarding</button><span> ---Use this to find the next hop in the MPLS path to trace manually</span> <br>
+<br />
+                                <button class="coolbutton" id="formClear" type="reset"> Clear Fields/Output </button>
+<br />
+                <h1 class="headers">Command output:</h1><br> 
+                        <output name="result"> </output> <br>
+                        <output name="reverse"> </output> <br />
+                        <output name="trace"></output> <br>
+                        <output name="forwarding"></output> <br>
+                        <output name="alcatel"></output><br>
+                        <output name="clear"></output><br>
+                     </form>
+      
+
+    </body>
+
+    <footer>
+        <script src="scripts.js"></script>
+    </footer>
+</html>
+
+
+
+
+
+
+
+
+ 
