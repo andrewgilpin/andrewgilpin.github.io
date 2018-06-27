@@ -19,8 +19,7 @@ img {
 input, textarea {
   background: black;
   color: white;
-  border-style: solid;
-  border-color: #bfbfbf;
+  border: 1px solid #bfbfbf;
 }
 legend {
 	color: #bfbfbf;
@@ -30,7 +29,11 @@ legend {
 ==================================== */
 
 .main-header {
-	background: inherit;
+	background-image: -webkit-linear-gradient(top, grey, black); 
+	    background-image: -moz-linear-gradient(top, grey, black); 
+	    background-image: -ms-linear-gradient(top, grey, black); 
+	    background-image: -o-linear-gradient(top, grey, black); 
+	    background-image: linear-gradient(to bottom, grey, black); 
 	padding: 1em 0;
 	text-align: center;
 }
