@@ -43,11 +43,11 @@
                             <input class="formthings" type="text" id="pseudowire" name="pseudowire">
                             <br />
                         </fieldset> 
-                                <button class="coolbutton" id="formSubmit" type="submit" href="Bot">Ping command A to Z</button><span> ---Ping across the path  (Note: If your Z side device is a 7600, you will not be able to ping to it, but you can ping from it to a 9K)</span> <br>
-                                <button class="coolbutton" id="submitReverse" type="submit" href="Bot">Ping command Z to A</button><span> ---Ping across the reverse path</span><br>
-                                <button class="coolbutton" id="submitAlcatel" type="submit" href="Bot">Alcatel Z to Cisco A</button><span> ---Use this if your Z side device is an Alcatel (Note: This is not always accurate as the pings may deviate from the MPLS path.)</span> <br>
-                                <button class="coolbutton" id="submitTrace" type="submit" href="Bot">MPLS Trace</button><span> ---Automatically trace from the A side to the Z side<span> <br>
-                                <button class="coolbutton" id="submitForwarding" type="submit" href="Bot">MPLS Forwarding</button><span> ---Use this to find the next hop in the MPLS path to trace manually</span> <br>
+                                <button class="coolbutton" id="formSubmit" type="submit" href="#Bot">Ping command A to Z</button><span> ---Ping across the path  (Note: If your Z side device is a 7600, you will not be able to ping to it, but you can ping from it to a 9K)</span> <br>
+                                <button class="coolbutton" id="submitReverse" type="submit" href="#Bot">Ping command Z to A</button><span> ---Ping across the reverse path</span><br>
+                                <button class="coolbutton" id="submitAlcatel" type="submit" href="#Bot">Alcatel Z to Cisco A</button><span> ---Use this if your Z side device is an Alcatel (Note: This is not always accurate as the pings may deviate from the MPLS path.)</span> <br>
+                                <button class="coolbutton" id="submitTrace" type="submit" href="#Bot">MPLS Trace</button><span> ---Automatically trace from the A side to the Z side<span> <br>
+                                <button class="coolbutton" id="submitForwarding" type="submit" href="#Bot">MPLS Forwarding</button><span> ---Use this to find the next hop in the MPLS path to trace manually</span> <br>
 <br />
                                 <button class="coolbutton" id="formClear" type="reset"> Clear Fields/Output </button>
 <br />
@@ -58,13 +58,13 @@
                         <output name="forwarding"></output> <br>
                         <output name="alcatel"></output><br>
                         <output name="clear"></output><br>
-			    <a name="Bot">
                      </form>
       
 </div>
     </body>
 
     <footer>
+	    <a name="Bot">
         <script src="scripts.js"></script>
     </footer>
 </html>
