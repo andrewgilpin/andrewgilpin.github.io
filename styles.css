@@ -9,7 +9,11 @@
 body {
 	line-height: 1.6;
 	color: #bfbfbf;
-	background: black;
+	background-image: -webkit-linear-gradient(top, #000055, black); 
+	background-image: -moz-linear-gradient(top, #000055, black); 
+	background-image: -ms-linear-gradient(top, #000055, black); 
+	background-image: -o-linear-gradient(top, #000055, black); 
+	background-image: linear-gradient(to bottom, #000055, black); 
 }
 
 span {
@@ -28,18 +32,18 @@ input, textarea {
 legend {
 	color: #bfbfbf;
 }
+footer {
+    position: fixed;
+    bottom: 0;
+}
 
 /* ================================= 
   Classes
 ==================================== */
 
 .main-header {
-	background-image: -webkit-linear-gradient(top, grey, black); 
-	    background-image: -moz-linear-gradient(top, grey, black); 
-	    background-image: -ms-linear-gradient(top, grey, black); 
-	    background-image: -o-linear-gradient(top, grey, black); 
-	    background-image: linear-gradient(to bottom, grey, black); 
-	padding: 1em 0;
+	height: 80px;
+	width: 100%;
 	text-align: center;
 }
 

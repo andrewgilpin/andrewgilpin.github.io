@@ -13,6 +13,7 @@
 ==================================== */
 
 		function result(event) {
+		window.scrollTo(0,document.body.scrollHeight);
                 event.preventDefault();
                 var aside = document.getElementById( 'aside').value;
                 var zside = document.getElementById( 'zside').value;
@@ -21,6 +22,7 @@
                 document.querySelector('output').innerHTML = 'ping mpls pseudowire ' + zside + ' ' + pseudowire + ' source ' + aside + ' size 1500 repeat 100 interval 10';
                 }
                 function reverse(event) {
+		window.scrollTo(0,document.body.scrollHeight);
                 event.preventDefault();
                 var aside = document.getElementById('aside').value;
                 var zside = document.getElementById('zside').value;
@@ -29,6 +31,7 @@
                 document.querySelector('output').innerHTML = 'ping mpls pseudowire ' + aside + ' ' + pseudowire + ' source ' + zside + ' size 1500 repeat 100 interval 10';
                 }
                  function trace(event) {
+		window.scrollTo(0,document.body.scrollHeight);
                 event.preventDefault();
                 var aside = document.getElementById('aside').value;
                 var zside = document.getElementById('zside').value;
@@ -36,12 +39,14 @@
                 document.querySelector('output').innerHTML = 'traceroute ' + zside + ' ' + ' source ' + aside;
                 }
                 function forwarding(event) {
+		window.scrollTo(0,document.body.scrollHeight);
                  event.preventDefault();
                  var zside = document.getElementById('zside').value;
                  console.log(zside);
                  document.querySelector('output').innerHTML = 'show mpls forwarding prefix ' + zside + '/32 ';
                 }
                 function alcatel(event) {
+		window.scrollTo(0,document.body.scrollHeight);
                 event.preventDefault();
                 var aside = document.getElementById('aside').value;
                 var zside = document.getElementById('zside').value;
