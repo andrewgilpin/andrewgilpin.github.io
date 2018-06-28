@@ -21,8 +21,8 @@ The class(es) I created are:
 1. .coolbutton
 This class makes my buttons look great!
 
-2. .main-header
-This class makes my header look great!
+2. .formthings and .uniformity
+These classes keep my OCD happy by normalizing the form element.
 
 ```
 
