@@ -9,11 +9,11 @@
 body {
 	line-height: 1.6;
 	color: #bfbfbf;
-	background-image: -webkit-linear-gradient(top, #000055, black); 
-	background-image: -moz-linear-gradient(top, #000055, black); 
-	background-image: -ms-linear-gradient(top, #000055, black); 
-	background-image: -o-linear-gradient(top, #000055, black); 
-	background-image: linear-gradient(to bottom, #000055, black); 
+	background-image: -webkit-linear-gradient(top blue, #000055, black); 
+	background-image: -moz-linear-gradient(top, blue, #000055, black); 
+	background-image: -ms-linear-gradient(top, blue, #000055, black); 
+	background-image: -o-linear-gradient(top, blue, #000055, black); 
+	background-image: linear-gradient(to bottom, blue, #000055, black); 
 }
 
 span {
@@ -32,6 +32,9 @@ input, textarea {
 legend {
 	color: #bfbfbf;
 }
+fieldset {
+	width: 26.6%;
+}
 footer {
     position: fixed;
     bottom: 0;
@@ -48,7 +51,7 @@ footer {
 }
 
 .container {
-	width: 70%;
+	width: 80%;
 	margin: 0 auto;
 }
 
@@ -63,7 +66,7 @@ footer {
 	    -moz-border-radius: 25; 
 	    border-radius: 25px; 
 	    text-shadow: 1px 1px 3px 66666; 
-	    color: white; 
+	    color: lightgrey; 
 	    font-size: 15px; 
 	    padding: 10px 20px 10px 20px; 
 	    text-decoration: none; 
