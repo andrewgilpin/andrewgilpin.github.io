@@ -1,11 +1,11 @@
  <!--================================= 
-  Begin derp
+  Begin a 3 day derp
 ====================================-->
 <!DOCTYPE html>
 <!-- ================================= 
-  End derp
+  End a 3 day derp
 ====================================-->
-
+<!--Always remember your <!DOCTYPE html> because if you don't, things will be borked-->
 
 <html>
 <head>
@@ -20,6 +20,8 @@
 <title>MPLS Tools</title>
 </head>
 <body>
+
+    <!--This is the section that walks you through getting the information that you will enter into the table below-->
 <div class="container">
         <p>To get the information needed to fill out this template, you will need to first find the xconnect information. This can be done by showing all xconnects and locating your customer's vlan/subinterface, searching by subinterface, or pseudowire ID.</p>
             <h2 class="headers">Commands to locate the xconnect information:</h2>
@@ -28,13 +30,15 @@
                 <p>show l2vpn xconnect interface Gi0/1/1/6.3004  --This will display the xconnect on a specific customer's subinterface.</p>
                 <p>show l2vpn xconnect pw-id 100227708  --This will display the xconnect by pseudowire.</p>
                 <p>With this output, we can see that the Z side of the circuit is at 96.34.238.66 and the pseudowire ID is 100227708. Now we need the loopback 14 address of our A side device.</p>
-                    <img src="https://i.imgur.com/gKbtZaW.png" title="show l2vpn xconnect interface Gi0/1/1/6.3004" />
+                    <img src="https://i.imgur.com/gKbtZaW.png" alt="command output for show l2vpn xconnect interface Gi0/1/1/6.3004" title="show l2vpn xconnect interface Gi0/1/1/6.3004" />
 <br />
 <br />
                 <p>show running-config interface Loopback 14</p>
-                    <img src="https://i.imgur.com/BmUZKEl.png" title="show running-config interface Loopback 14" />
+                    <img src="https://i.imgur.com/BmUZKEl.png" alt="command output for show running-config interface Loopback 14" title="show running-config interface Loopback 14" />
                 <p>After running this command, we now have the A side ip as 96.34.236.150 and have the information we need to be able to use the command generator!</p>
 <br />
+
+<!--This is the command generator section, where all the magic, that you see, happens-->
                     <form action="index.html" method="post">
                     <h1 class="headers">MPLS Command Generator</h1>
                         <fieldset>
@@ -49,6 +53,7 @@
                             <input class="formthings" type="text" id="pseudowire" name="pseudowire">
                             <br />
                         </fieldset> 
+                        <!--These buttons are just as functional as they are pretty, after all, you're here for their ability.-->
                                 <button class="coolbutton" id="formSubmit" type="submit">Ping command A to Z</button><span> ---Ping across the path  (Note: If your Z side device is a 7600, you will not be able to ping to it, but you can ping from it to a 9K)</span> <br>
                                 <button class="coolbutton" id="submitReverse" type="submit">Ping command Z to A</button><span> ---Ping across the reverse path</span><br>
                                 <button class="coolbutton" id="submitAlcatel" type="submit">Alcatel Z to Cisco A</button><span> ---Use this if your Z side device is an Alcatel (Note: This is not always accurate as the pings may deviate from the MPLS path.)</span> <br>
@@ -57,6 +62,8 @@
 <br />
                                 <button class="coolbutton" id="formClear" type="reset"> Clear Fields/Output </button>
 <br />
+
+<!--This is where you get your instant gratification for commands that you may not know by heart.-->
                 <h1 class="headers">Command output:</h1><br> 
                         <output name="result"> </output> <br>
                         <output name="reverse"> </output> <br>
@@ -65,22 +72,12 @@
                         <output name="alcatel"></output><br>
                         <output name="clear"></output><br>
                      </form>
-      <div id="Bot"></div>
 </div>
 
     </body>
 
     <footer>
-	
+        <!--This is the script that holds all the magic of this page that you don't see.-->
         <script src="scripts.js"></script>
     </footer>
 </html>
-
-
-
-
-
-
-
-
- 
