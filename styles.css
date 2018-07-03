@@ -39,6 +39,9 @@ footer {
     position: fixed;
     bottom: 0;
 }
+output {
+	font-size: 1.6em
+}
 
 /* ================================= 
   Classes
