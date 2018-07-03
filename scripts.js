@@ -38,7 +38,7 @@
         var aside = document.getElementById('aside').value;
         var zside = document.getElementById('zside').value;
         console.log(aside, zside);
-        document.querySelector('output').innerHTML = 'traceroute mpls ipv4 ' + zside +' '/32+ ' source ' + aside;
+        document.querySelector('output').innerHTML = 'traceroute mpls ipv4 ' + zside +' '\\32+ ' source ' + aside;
         }
 
         function forwarding(event) {
