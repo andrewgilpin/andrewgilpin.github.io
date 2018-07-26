@@ -87,6 +87,7 @@ output {
     }
 .name {
 	box-sizing: border-box;
+	color: black;
 }
 
 
@@ -104,9 +105,15 @@ output {
 	}
 }
 
-@media (max-width: 768px) {
-	.name {
-		margin: auto;
-		
+@media (max-width: 534px) {
+	.main-header {
+		margin-bottom: 8em;	
 	}
 } 
+
+@media (max-width: 389px) {
+	.main-header {
+		margin-bottom: 15em;
+	}
+} 
+
