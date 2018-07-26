@@ -86,7 +86,6 @@ output {
         width: 80px; display: inline-block;
     }
 .name {
-	margin: 0;
 	box-sizing: border-box;
 }
 
@@ -104,3 +103,10 @@ output {
 		margin: 0 auto;
 	}
 }
+
+@media (max-width: 768px) {
+	.name {
+		margin: auto;
+		
+	}
+} 
